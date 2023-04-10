@@ -1,16 +1,16 @@
 public class StepTracker {
 
+    private static final String[] MONTH_NAMES = {"Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+            "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"};
+    private static final int[] MONTH_DAYS = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     private int stepDailyRate;
     private final MonthData[] monthsData;
 
     StepTracker() {
-        stepDailyRate = 7000;
-        final String[] monthNames = {"Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-                "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"};
-        final int[] monthDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-        monthsData = new MonthData[12];
+        this.stepDailyRate = 7000;
+        this.monthsData = new MonthData[12];
         for (int i = 0; i < monthsData.length; i++) {
-            monthsData[i] = new MonthData(monthNames[i], monthDays[i]);
+            monthsData[i] = new MonthData(MONTH_NAMES[i], MONTH_DAYS[i]);
         }
     }
 

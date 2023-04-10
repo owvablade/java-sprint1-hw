@@ -9,9 +9,9 @@ public class MonthData {
     MonthData(String monthName, int days) {
         this.monthName = monthName;
         this.days = days;
-        stepsPerDay = new int[days];
-        kilometersPerDay = new double[days];
-        caloriesPerDay = new double[days];
+        this.stepsPerDay = new int[days];
+        this.kilometersPerDay = new double[days];
+        this.caloriesPerDay = new double[days];
     }
 
     public String getMonthName() {
