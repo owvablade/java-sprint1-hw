@@ -1,8 +1,8 @@
 public class StepTracker {
 
+    private static final int[] MONTH_DAYS = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     private static final String[] MONTH_NAMES = {"Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
             "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"};
-    private static final int[] MONTH_DAYS = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     private int stepDailyRate;
     private final MonthData[] monthsData;
 
@@ -30,7 +30,7 @@ public class StepTracker {
         monthsData[month].setStepsOfDay(day, steps);
     }
 
-    public void showStatisticsForMonth(int month) {
+    public void printStatisticsForMonth(int month) {
         int daysWithCompletedGoal = 0;
         System.out.printf("Статистика за %s:%n", monthsData[month].getMonthName());
         for (int i = 0; i < monthsData[month].getDays(); i++) {
