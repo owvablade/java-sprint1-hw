@@ -36,6 +36,7 @@ public class Main {
                     break;
                 case EXIT:
                     isRunning = false;
+                    scanner.close();
                     break;
                 default:
                     System.out.println("Неопознанная команда");
